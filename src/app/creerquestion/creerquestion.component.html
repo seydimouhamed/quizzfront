@@ -1,0 +1,64 @@
+
+<div class="contain_pl">
+    <h2 class="h2">Parametrer votre question </h2>
+    {{ formQuestion.value | json }}
+    <div class="contain_sub">
+            <form [formGroup]="formQuestion" novalidate >
+                <div class="div_question">
+                    <label>Questions</label>
+                    <textarea name="question"  formControlName="libelle" id="question" ></textarea>
+                    <small class="error" *ngIf="!formQuestion.controls.libelle.valid" >
+                        Obligatoire!
+                    </small>
+                </div>
+                <div class="div_score">
+                    <label>Nbr de point </label><input id="score" type="text"  formControlName="score"/>
+                    <small class="error" *ngIf="!formQuestion.controls.score.valid" >
+                        Obligatoire!
+                    </small>
+                </div>
+                <div class="div_type">
+                    <label>Type de reponse </label>
+                    <select id="type" formControlName="type" (change)="onChangeType()">
+                        <option value="cm">choix multiple</option>
+                        <option value="cs">choix simple</option>
+                        <option value="ct">choix text</option>
+                    </select>
+                    <span *ngIf="typeRep"><button (click)="addReponse()" class="btn_gene"  id="btn_gene" >&nbsp;</button></span>
+                </div>
+                <br>
+                <span id="div_reponse" formArrayName="reponses">
+                    
+                    <span *ngFor="let reponse of formQuestion.controls.reponses['controls']; let i=index" class="w_96">
+                        
+            
+                        <div [formGroupName]="i">
+            
+                            <div>
+                                <label>Reponse {{i + 1}}</label>
+                                <input type="text" class="stlIp" formControlName="libeller">
+                                
+                            </div>
+                            <!--postcode-->
+                            <div *ngIf="typeRep">
+                                <input type="{{ typeRep }}" name="isC" formControlName="i"  (change)="onSelect(i)">
+                            </div>  
+                            <div>
+                                <span class="btn_remove" *ngIf="formQuestion.controls.reponses.controls.length > 1" (click)="removeReponse(i)">
+                                    &nbsp;  &nbsp; 
+                                </span>
+                            </div>       
+                        </div>
+                        <!--display error message if street is not valid-->
+                        <small class="error" [hidden]="formQuestion.controls.reponses.controls[i].controls.libeller.valid">
+                             obligatoire!
+                        </small>  
+                    </span>
+
+                </span>
+                <small id="general_error" class="error"> </small>
+                <input type="submit" class="btn_enr" name="register_question" [disabled]="!formQuestion.valid" value="Enregistrer"/>
+            </form>
+    </div>
+</div>
+    

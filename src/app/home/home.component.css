@@ -1,0 +1,304 @@
+
+/* RGB(132, 94, 247) for background opacity*/
+
+
+.titre
+{
+    text-align: center;
+    color: white;
+    line-height: 2em;
+}
+.img_h100
+{
+    height: 100%;
+}
+
+
+.container
+{
+    width: 100%;
+}
+h1,h2,h3
+{
+    text-align:center;
+    line-height: 3em;
+}
+.h2
+{
+    font-size: 18px;
+    font-weight: bold;
+}
+.head_box
+{
+    width: 100%;
+    height: 80px;
+    background-color:#3bc9db;
+    color: white;
+    line-height: 3.5em;
+}
+.labhead{margin-left: 5%;}
+.box
+{
+    width: 94%; 
+    margin-left: 3%;
+    background-color: #f8f9fa;
+}
+
+.div_input
+{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 25px;
+    height: 45px;
+}
+
+.iptxt
+{
+    width: 100%;
+    height: 35px;
+    border-radius: 0%;
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position: right;
+    padding-left: 10px;
+    background-color: #eceff4;
+    
+}
+.iplogin
+{
+    background-image: url("/assets/icones/ic-login.png");
+
+}
+.ippwd
+{
+    background-image: url("/assets/icones/ic-password.png");
+
+}
+/* .ipbtn
+{
+    width: 100px;
+    height: 40px;
+    border: none;
+    color:white;
+    border-radius: 5px;
+    background-color:#3bc9db;
+} */
+a
+{
+    color: gray;
+    text-decoration: none;
+}
+a:hover
+{
+    opacity: 0.5;
+}
+
+.float_f
+{
+    float:left;
+}
+.float_r
+{
+    float: right;
+}
+.btn_remove
+{
+    background-image:url("/assets/icones/ic-supprimer.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: white;
+    border: none;
+}
+
+.box_menu_1
+{  margin-top: 25px;
+  margin-left: 3%;
+  border-radius: 7px;
+  float: left;
+  width: 35%;
+  height:380px;
+  background-color: white; 
+  box-shadow: 1px 1px 3px 3px lightgrey; 
+}
+.body_box
+{
+    background-color: #f8f9fa;
+    width: 100%;
+    height:500px;
+}
+.li
+{
+    padding-left: 20px;
+    list-style-type: none;
+    height: 40px;
+    margin-top: 10px;
+    line-height: 2.5em;
+    width: calc(100% - 40px);
+}
+ .active
+{
+   background-color: RGB(229, 233, 240,0.4);
+    border-left: 3px solid green;
+}
+
+.div_avatar_1
+{
+    width:100%;
+    border-radius: 7px;
+    background-color: #51bfd0;
+    background-image: linear-gradient(to top, #51bfd0, white)
+    ;height: 130px;
+
+}
+.img_avatar_1
+{
+    width: 100px;
+    float: left;
+    border-radius: 50%;
+    height: 100px;
+    margin-left: 5%;
+    margin-top: 15px;
+    border:1px solid gray;
+}
+
+.w_70_h_70
+{
+    width: 84%;
+    height: 84%;
+    margin-top: 8%;
+    margin-left: 8%;
+    border-radius: 50%;
+}
+
+.w100
+{
+width: 100%;
+}
+
+.mg_top_20
+{
+    margin-top: 20px;
+}
+
+/* sous menu id */
+.sm_1, .sm_2, .sm_3, .sm_4
+{
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: 97%;
+    width: 95%;
+}
+.sm_1
+{
+    background-image: url("/assets/icones/ic-liste.png");
+}
+.sm_1.active,.sm_3.active
+{
+    background-image: url("/assets/icones/ic-liste-active.png");
+}
+.sm_2
+{
+    background-image: url("/assets/icones/ic-ajout.png");
+}
+.sm_2.active , .sm_4.active
+{
+    background-image: url("/assets/icones/ic-ajout-active.png");
+}
+.sm_3
+{
+    background-image: url("/assets/icones/ic-liste.png");
+}
+.sm_4
+{
+    background-image: url("/assets/icones/ic-ajout.png");
+}
+
+
+.rotate_page
+{
+    width:55%;
+    float: right;
+    height:500px;
+    border-radius: 5px;
+    margin-right: 5%;
+}
+th
+{
+    text-align: left;
+}
+
+.contain_pl
+{
+    width:90%;
+    position: relative;
+    background-color: white; 
+    border-radius:5px;
+    box-shadow: 1px 1px 3px 3px lightgrey; 
+    
+}
+.contain_pl.w100
+{
+width: 100%;
+}
+.contain_sub
+{
+    border:2px solid #3bc9db;
+    border-radius:10px;
+    width:90%;
+    margin-left:5%;
+}
+
+.div_nav
+{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    height:50px;
+}
+
+
+
+.div_head span
+{
+    position: absolute;
+    top:10px;
+    right: 0px;
+}
+.div_head span input[type="number"]
+{
+    width: 50px;
+    height: 30px;
+    border: 1px solid gray;
+    -moz-appearance: textfield;
+    border-radius: 0px;
+}
+
+
+.div_head span input[type="submit"]
+{
+    border: 1px solid gray;
+    height: 30px; 
+    background-color: rgba(32, 32, 219, 0.836);
+    color: white;
+}
+
+.inline
+{
+    display: inline;
+}
+
+.mod
+{
+   margin-top: 10px;
+}
+.btn_gene
+{
+    /* position: absolute; */
+    background-image:url("/assets/icones/ic-ajout-reponse.png");
+    background-position: center;
+    border: none;
+     width: 30px;
+    height: 30px;
+    background-color:white;
+}

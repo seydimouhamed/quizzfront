@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="box w92">
+        <div class="head_box">
+            <div *ngIf="user">
+                <div class="div_avatar" >
+                        <img class="w_70_h_70 img_avatar" alt="av"/>
+                </div>
+                <div class="name_user">
+                <a href="index.php?origin=player&action=profil">
+                    {{ user.firstname}}  {{user.lastname}}
+                </a>
+                </div>
+            </div>
+            <p>Subtitle subtitle</p>
+            <!--"index.php?origin=deconnexion" -->
+                <button class="ipbtn pos_abs float_r" *ngIf="currentUser" (click)="logout()" id="myBtn" >Déconnexion</button>
+            <!--  -->
+        </div>
+        <!------------------------------------------------------>
+
+
+        <div class="body_box">
+            <div class="box_menu_1">
+                <div class="div_avatar_1">
+                    <div class="img_avatar_1" *ngIf="getImg()==null; else avatarUser">
+                        <img class="w_70_h_70"  alt="av" src="/assets/imageUsers/default.jpg"/>
+                    </div>
+                       <ng-template #avatarUser><img class="w_70_h_70" style="float:left;width:100px;height:100px" alt="av" [src]="getImg()"/></ng-template>
+                    <div class="float_l ">
+                        <br><br>
+                        <a href="#">
+                            <div>&nbsp;&nbsp;&nbsp;<label class="lab_prenom ">{{ user.firstname}} </label></div>
+                            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label class="lab_nom">{{ user.lastname}} </label></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="div_menu"> 
+                    <a  [routerLink]="[{outlets:{home:['dashboard']}}]"> <div class="li   sm_4" >Dashboard</div></a>
+                    <a  [routerLink]="[{outlets:{home:['questions']}}]"><div class="li sm_1" ><span>Liste Questions</span></div></a>
+                    <a  [routerLink]="[{outlets:{home:['addAdmin']}}]"><div class="li  sm_2" >Créer Admin</div></a>
+                    <a  [routerLink]="[{outlets:{home:['joueurs']}}]"><div class="li  sm_3" >Liste joueurs</div></a>
+                    <a  [routerLink]="[{outlets:{home:['addQuestion']}}]"> <div class="li  sm_4 " >Créer Questions</div></a>
+                </div>
+            </div>
+        
+            <div class="rotate_page">
+  
+                <router-outlet name='home'></router-outlet>
+                
+                <!-- <div *ngIf="loading" class="spinner-border spinner-border-sm"></div>
+                <ul *ngIf="users">
+                    
+                    <li *ngFor="let user of users['hydra:member']">
+                        
+                        {{user.firstname}} {{user.lastname}}
+                    </li>
+                </ul> -->
+            </div>
+        </div>
+
+        <!------------------------------------------------------>
+    </div>
+</div>

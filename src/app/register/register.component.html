@@ -1,0 +1,135 @@
+  <div class="div1_1">
+                <div class="div2_1">
+            <div class="box_left_1">
+                <div class="width_90_1">
+                    <span class="h2">s'inscrire</span><br>
+                    <small>s'incrire pour jouer </small>
+                    <hr/>
+                    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                        <input type="hidden" name="profil" value=""/>
+                        <small for="fisrtname">Prénom</small><small id="error_1" class="input_alert float_r"></small>
+                        <div class="div_input_1"><input class="iptxt_1 iplogin_1"  [ngClass]="{ 'is-invalid': submitted && f.firstname.errors }" formControlName="firstname" type="text" name="firstname" /></div>
+                        <small for="lastname">Nom</small><small id="error_2" class="input_alert float_r"> </small>
+                        <div class="div_input_1 "><input class="iptxt_1 ippwd_1"  type="text" name="lastname"   [ngClass]="{ 'is-invalid': submitted && f.lastname.errors }" formControlName="lastname"  /></div>
+                        <small for="lastname">Login</small><small id="error_3" class="input_alert float_r"> </small>
+                        <div class="div_input_1 "><input class="iptxt_1 ippwd_1" type="text" name="login" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" formControlName="username" /></div>
+                        <small for="lastname">Password</small><small id="error_4" class="input_alert float_r"> </small>
+                        <div class="div_input_1 "><input class="iptxt_1 ippwd_1"  error="error_4" id="pwd"  type="password" name="pwd" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" formControlName="password" /></div>
+                        <small for="lastname">Confirm password</small><small id="pwd_ctxt" class="input_alert float_r"></small>
+                        <div class="div_input_1 "><input class="iptxt_1 ippwd_1" type="password" id="pwd_c" name="confirmpwd" /></div>
+                        <div class="div_input_1 "><label class="float_f">Avatar</label><label class="file float_r"  for="imgUser">choisir une image<input class="fileBtn_1 float_r" error="error_f" type="file"  name="avatar" id="imgUser" (change)="onFileSelect($event)" accept="image/png, image/jpeg"/></label></div>
+                        <div class="div_input_1"><button type="submit"  class="ipbtn_1"  name="inscription" >Créer compte</button>&nbsp;&nbsp;&nbsp;
+                            <a routerLink="/login" class="a"><small>Se connecter</small></a>
+                      
+                        </div>
+                    </form>
+
+            <!-- <script>
+
+                const inputs = document.getElementsByTagName("input");
+                for(input of inputs)
+                {
+                    input.addEventListener("keyup",function(e)
+                    {
+                        if(e.target.hasAttribute("error"))
+                        {
+                            var idDivError=e.target.getAttribute("error");
+                            if(e.target.getAttribute("type")=="password")
+                            {
+                                if(e.target.value.length < 5)
+                                {
+                                    document.getElementById(idDivError).innerText="Doit contenir au moins 5 caracteres";
+                                }
+                                else
+                                {
+                                    document.getElementById(idDivError).innerText="";
+                                }
+                            }
+                            else
+                            {
+                                document.getElementById(idDivError).innerText="";
+                            }
+                        }
+                    })
+                }
+
+            document.getElementById("pwd_c").addEventListener("keyup",function()
+            {
+                var pwd=document.getElementById("pwd").value;
+                var pwd_c=document.getElementById("pwd_c").value;
+                if(pwd_c===pwd)
+                {
+                    document.getElementById('pwd_ctxt').innerText="";
+
+                }
+                else
+                {
+                    document.getElementById('pwd_ctxt').innerText="les mots de passes ne sont pas identiques";
+
+                }
+            });
+
+                document.getElementById("form_register").addEventListener("submit",function(e)
+                {   
+                    const inputs=document.getElementsByTagName("input");
+                    var error=false;
+                    for(input of inputs)
+                    {
+                        if(input.hasAttribute("error"))
+                        {
+                            var idDivError = input.getAttribute("error");
+                            if(!input.value.trim())
+                            {
+                                if(input.type==='file')
+                                {
+                                    document.getElementById(idDivError).innerText='choisir une photo';
+                                }
+                                else
+                                {
+                                    document.getElementById(idDivError).innerText='ce champ est obligatoitre';
+                                }
+                                error=true;
+                            }
+                        }
+
+                    }
+
+                    
+                    var pwd=document.getElementById("pwd").value.trim();
+                    var pwd_c=document.getElementById("pwd_c").value.trim();
+                    errorpwd=false;
+                    if(pwd!==pwd_c || pwd.length<5)
+                    {
+                        document.getElementById('error_4').innerText="le mot de passe doit avoir au moins 5 caracteres";
+                        errorpwd=true;
+                    }
+                    
+                    if(error || errorpwd)
+                    {
+                        e.preventDefault();
+                        return false;
+                    }
+                })
+
+                function prevUpload()
+                {
+                    document.getElementById('error_f').innerText="";
+                    var file = document.getElementById("imgUser").files[0];
+                    var reader = new FileReader();
+                    if (file) {
+                        reader.readAsDataURL(file);
+                        reader.onloadend = function () {
+                        document.getElementById("avatar").src = reader.result;
+                        }
+                    }
+                    }
+            </script> -->
+                </div>
+            </div>
+            <div class="box_right_1">
+                <img class="imgProfil_1" alt='logo' id="avatar" src="assets/icones/img5.jpg">
+                
+                <p class="center">Avatar player<br><small id="error_f" class="input_alert float_r"> </small></p>
+            </div>
+            </div>
+            </div>

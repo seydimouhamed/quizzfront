@@ -1,1 +1,295 @@
 /* You can add global styles to this file, and also import other style files */
+
+body
+{
+    background-image: url('/assets/images/img-bg.jpg') ;
+    background-size: cover;
+    margin: 0 auto;
+}
+html,body
+{
+    height: 100%;
+}
+  
+.transparent
+{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(23,128,109, .3);
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap'); */
+/* RGB(132, 94, 247) for background opacity*/
+
+
+ /* #51bfd0;  #042425;vert fonc #5e90af; noir:#042425; vert claire:#3addd6; gris:#818181; 
+ rouge: #e56946; blanc #f8fdfd; */
+ *
+ {
+     font-family: 'Open Sans', sans-serif;
+ }
+ .lab_nom,.lab_prenom
+ {
+     color:white;
+     font-weight: bold;
+ }
+ .test
+ {
+     font: outline;
+ }
+ /*ALERT style */
+ .msg
+ {
+     padding: 20px;
+     color: white;
+     width: 40%;
+     position: absolute;
+     right: 0px;
+     z-index: 100;
+ }
+ .msg.alert
+ {
+     background-color: #f44336;
+ 
+ }
+ .msg.succes
+ {
+     background-color: #6cf436;
+ 
+ }
+ .msg.info
+ {
+     background-color: rgb(54, 174, 244);
+ 
+ }
+ 
+ .closebtn {
+     margin-left: 15px;
+     color: white;
+     font-weight: bold;
+     float: right;
+     font-size: 22px;
+     line-height: 20px;
+     cursor: pointer;
+     transition: 0.3s;
+   }
+   
+   .closebtn:hover {
+     color: black;
+   }
+ /*ALERT style */
+
+ nav
+ {
+     width: 100%;
+     height: 80px;
+     background-color:#042425;
+     /* color: white; */
+     font-size: 25px;
+ }
+ 
+ .titre
+ {
+     text-align: center;
+     color: white;
+     line-height: 2.5em;
+     font-size: 22px;
+ }
+ .img_h100
+ {
+     height: 100%;
+ }
+ .logo
+ {
+     background-image: url("/assets/images/logo-QuizzSA.png") ;
+     background-size: cover;
+     float: left;
+     margin-left: 10px;
+     height: 100%;
+     width: 40px;
+ }
+ 
+ .container
+ {
+     width: 100%;
+ }
+ 
+ .head_box
+ {
+     width: 100%;
+     height: 80px;
+     background-color:#51bfd0;
+     color: white;
+     line-height: 4em;
+     font-size: 20px;
+ }
+ .labhead{margin-left: 5%;}
+ 
+ .div_input
+ {
+     width: 90%;
+     margin-left: 5%;
+     margin-top: 25px;
+     height: 60px;
+ }
+ 
+ .iptxt
+ {
+     width: 97%;
+     height: 50px;
+     border-radius: 0%;
+     background-size: 15px 15px;
+     background-repeat: no-repeat;
+     background-position: 97%;
+     padding-left: 3%;
+     border: 1px solid #ced4da;
+     border-radius: 3px;
+     background-color: #eceff4;
+     
+ }
+ .iplogin
+ {
+     background-image: url('/assets/icones/ic-login.png');
+ 
+ }
+ .ippwd
+ {
+     background-image: url("/assets/icones/ic-password.png");
+ 
+ }
+ 
+ .input_alert
+ {
+     font-size: 12px;
+     color:red;
+ }
+ .ipbtn
+ {
+     border: none;
+     color:white;
+     border-radius: 5px;
+     font-size: 18px;
+     background-color:#51bfd0;
+     padding: 10px;
+ }
+ a
+ {
+     color: lightslategray;
+     text-decoration: none;
+ }
+ 
+ 
+ h1,h2,h3
+ {
+     text-align:center;
+ }
+ p
+ {
+     line-height: 35px;
+     text-align: center;
+     font-size: 16px;
+     font-weight: bold;
+     text-transform: uppercase;
+ }
+ .head_box
+ {
+     position: relative;
+     width: 100%;
+     height: 80px;
+     background-color:#51bfd0;
+     color: white;
+     line-height: 3.5em;
+ }
+ .labhead{margin-left: 5%;}
+ .box
+ {
+     width: 94%; 
+     margin-left: 3%;
+     background-color: #f8f9fa;
+ }
+ 
+ .box.w50
+ {
+     width: 50%; 
+     margin-left: 25%;
+ }
+ 
+ .pos_abs
+ {
+     position: absolute;
+    right: 5%;
+    margin-top: -6%;
+     background-color: #3addd6;
+ }
+ 
+ 
+ 
+ .div_avatar
+ {
+     position: absolute;
+     width: 60px;
+     float: left;
+     height: 60px;
+     margin-left: 1px;
+     margin-top: 1px; 
+ }
+ .w100
+ {
+ width: 100%;
+ }
+ .content_inscription
+ {
+     width: 90%;
+     margin-left: 5%;
+ 
+ }
+ .w_70_h_70
+ {
+     width: 84%;
+     height: 84%;
+     margin-top: 8%;
+     margin-left: 8%;
+ }
+ .img_avatar
+ {
+     border-radius: 50%;
+ }
+ .name_user
+ {
+     position: absolute;
+     margin-top: 35px;  
+     margin-left: 5px;
+     font-size: 10px;
+     font-weight: bold;
+ }
+ 
+ 
+ .box_menu
+ {  margin-top: 25px;
+   margin-right: 3%;
+   border-radius: 7px;
+   float: right;
+   width: 25%;
+   height:295px;
+   background-color: white;  
+ }
+ 
+ .float_r
+ {
+     float: right;
+ }
+ 
+ .float_l
+ {
+     float: left; 
+ }
+ .ipbtn:disabled
+ {
+     background-color:gray;
+ }
+ 
+ .table
+ {
+     width:96%;
+     margin-left:2%;
+ }

@@ -1,0 +1,39 @@
+<form [formGroup]="myForm" novalidate (ngSubmit)="save()">
+
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" formControlName="name">
+        <small *ngIf="!myForm.controls.name.valid" class="text-danger">
+            Name est required!(5caracteres).
+        </small>
+    </div>
+
+    <div formArrayName="addresses">
+        <div *ngFor="let address of myForm.controls.addresses['controls']; let i=index">
+            <div>
+                <span>Adresse {{i + 1}}</span>
+                <span *ngIf="myForm.controls.addresses.controls.length > 1" (click)="removeAddress(i)">
+                    --
+                </span>
+            </div>
+
+            <div [formGroupName]="i">
+
+                <div>
+                    <label>street</label>
+                    <input type="text" formControlName="street">
+                    <!--display error message if street is not valid-->
+                    <small [hidden]="myForm.controls.addresses.controls[i].controls.street.valid">
+                        Street is required
+                    </small>
+                </div>
+                <!--postcode-->
+                <div>
+                    <label>postcode</label>
+                    <input type="text" formControlName="postcode">
+                </div>            </div>
+        </div>
+    </div>
+    <button (click)="addAddress()">++</button>
+        <button type="submit" [disabled]="!myForm.valid">Submit</button>
+</form>

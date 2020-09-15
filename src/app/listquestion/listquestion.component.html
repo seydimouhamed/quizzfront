@@ -1,0 +1,49 @@
+<p>listquestion works!</p>
+
+<!-- <li *ngFor="let q of question['hydra:member']">
+                        
+    {{q.firstname}} {{q.lastname}}
+</li> -->
+
+<div class="div_head">
+    <span>
+        <form id="form-number" >
+            Nbr de question/jeu
+            <input type="text"id="nombre" class="inNumber" name="nbrQJ"  value="5"/>
+            <input type="submit" name="rnbrQuestion" value="OK"/>
+        </form>
+    </span>
+</div>
+    <span id="error_number"><br></span>
+<br><br>
+<div *ngFor="let q of question['hydra:member'];let i=index;">
+    <input type="checkbox" name="check" class="mod" id="q_check_1" value="1"><span id='error_glob_1'></span>
+    {{ i+1 }}
+     <div id="">&nbsp;&nbsp;<strong class='sm_font13 mg_2' id=""> {{ q.libelle }} </strong>
+     </div>
+
+				<ul class='ul admin'>
+                    <li *ngFor="let rep of q.reponses">
+
+                        <label *ngIf="q.type=='cm' || q.type=='cs'" class="c_rep sm_font" id="">{{ rep.libeller}}
+                            <span *ngIf="q.type=='cm'">
+                                <input checked type="checkbox" id="" disabled  name="rep_user[]" value=""/>
+                                <span class="check" ></span>
+                            </span>
+                            <span *ngIf="q.type=='cs'">
+                                <input checked type="radio" id="" disabled  name="rep_user_{{i}}" value=""/>
+                                <span class="checkmark" ></span>
+                            </span>
+                        </label>
+			            	<input *ngIf="q.type=='ct'" class="iptxt w80" disabled id="rep_"  type="text" name="rep_user[]" value="{{ rep.libeller}}" required>
+                        
+                    </li>
+                </ul>
+                	
+    </div>
+    <div class="div_nav">
+            <a href='index.php?origin=admin&action=listQuestion&p' class='ipbtn float_l'>Précédent</a>
+
+            <a href='index.php?origin=admin&action=listQuestion&' class='ipbtn float_r'>Suivant</a>           
+
+    </div>
